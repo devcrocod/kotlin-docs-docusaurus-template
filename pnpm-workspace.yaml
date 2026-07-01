@@ -1,0 +1,6 @@
+# Build policy for pnpm 11 (settings live here, not package.json/.npmrc).
+# core-js ships a postinstall that is unnecessary at runtime; mark it
+# reviewed-and-disallowed so `pnpm install` does not fail the
+# strictDepBuilds gate (ERR_PNPM_IGNORED_BUILDS).
+allowBuilds:
+  core-js: false
